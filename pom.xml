@@ -30,75 +30,51 @@
     </description>
     <packaging>jar</packaging>
 
-    <licenses>
-        <license>
-            <name>Apache License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0</url>
-            <distribution>repo</distribution>
-        </license>
-    </licenses>
-
-    <scm>
-        <connection>scm:git:https://github.com/stormpath/stormpath-spring-juiser-origin-example.git</connection>
-        <developerConnection>scm:git:git@github.com:stormpath/stormpath-spring-juiser-origin-example.git
-        </developerConnection>
-        <url>git@github.com:stormpath/stormpath-spring-juiser-origin-example.git</url>
-        <tag>HEAD</tag>
-    </scm>
-    <issueManagement>
-        <system>GitHub Issues</system>
-        <url>https://github.com/stormpath/stormpath-spring-juiser-origin-example/issues</url>
-    </issueManagement>
-    <ciManagement>
-        <system>TravisCI</system>
-        <url>https://travis-ci.org/stormpath/stormpath-spring-juiser-origin-example</url>
-    </ciManagement>
-
     <properties>
-        <jdk.version>1.8</jdk.version>
-        <additionalparam>-Xdoclint:none</additionalparam>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
         <bouncycastle.version>1.56</bouncycastle.version>
         <juiser.version>0.1.0-SNAPSHOT</juiser.version>
         <logback.version>1.1.7</logback.version>
         <servlet.version>3.1.0</servlet.version>
         <slf4j.version>1.7.21</slf4j.version>
-        <spring.version>4.3.5.RELEASE</spring.version>
         <spring.boot.version>1.4.3.RELEASE</spring.boot.version>
-        <spring.security.version>4.2.1.RELEASE</spring.security.version>
-        <stormpath.version>1.3.1-SNAPSHOT</stormpath.version>
     </properties>
     <dependencies>
         <dependency>
+            <!-- To handle the X-Forwarded-User header: -->
             <groupId>com.stormpath.juiser</groupId>
             <artifactId>juiser-spring-boot-starter</artifactId>
             <version>${juiser.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-thymeleaf</artifactId>
-            <version>${spring.boot.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>javax.servlet</groupId>
-            <artifactId>javax.servlet-api</artifactId>
-            <version>${servlet.version}</version>
-        </dependency>
-        <!-- Runtime-only dependencies for the example: -->
-        <dependency>
+            <!-- So juiser can read *.pem public key files to verify the signature of the JWT in the
+                 X-Forwarded-User header: -->
             <groupId>org.bouncycastle</groupId>
             <artifactId>bcpkix-jdk15on</artifactId>
             <version>${bouncycastle.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
+            <!-- For the welcome.html Thymeleaf template: -->
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <!-- For MVC controllers: -->
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>${servlet.version}</version>
+        </dependency>
+        <dependency>
+            <!-- We use SLF4, but some dependencies use commons-logging: -->
             <groupId>org.slf4j</groupId>
             <artifactId>jcl-over-slf4j</artifactId>
             <version>${slf4j.version}</version>
             <scope>runtime</scope>
         </dependency>
         <dependency>
+            <!-- Logging implementation: -->
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
@@ -119,11 +95,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <version>2.8.2</version>
             </plugin>
         </plugins>
     </build>
