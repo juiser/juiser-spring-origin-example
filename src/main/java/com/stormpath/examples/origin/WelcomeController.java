@@ -6,8 +6,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import javax.servlet.http.HttpServletRequest;
-
 @Controller
 public class WelcomeController {
 
@@ -15,7 +13,7 @@ public class WelcomeController {
     private User user;
 
     @RequestMapping("/")
-    public String welcome(HttpServletRequest request, Model model) {
+    public String welcome(Model model) {
 
         model.addAttribute("user", user);
 

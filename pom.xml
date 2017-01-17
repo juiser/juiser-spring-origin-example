@@ -40,7 +40,7 @@
 
     <scm>
         <connection>scm:git:https://github.com/stormpath/stormpath-spring-juiser-origin-example.git</connection>
-        <developerConnection>scm:git:git@github.com:stormpath/stormpath-spring-zuul-gateway-example.git
+        <developerConnection>scm:git:git@github.com:stormpath/stormpath-spring-juiser-origin-example.git
         </developerConnection>
         <url>git@github.com:stormpath/stormpath-spring-juiser-origin-example.git</url>
         <tag>HEAD</tag>
