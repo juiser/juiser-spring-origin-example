@@ -23,9 +23,10 @@
     <artifactId>stormpath-spring-juiser-origin-example</artifactId>
     <version>0.1.0-SNAPSHOT</version>
     <name>Stormpath Spring Juiser Origin Example</name>
-    <description>A juiser-enabled backend origin server can automatically read an X-Forwarded-User header with a user
-        JWT, validate the JWT, extract the user information, and represent a user object in the origin application.
-        This example needs a gateway server to set such a header in the forwarded request - one such gateway example:
+    <description>A juiser-enabled backend origin server that can automatically read an X-Forwarded-User header with a
+        user JWT, validate the JWT, extract the user information, and represent that data in a user object.
+
+        This example needs a gateway server to set such a header in the forwarded request - one such gateway example is
         https://github.com/stormpath/stormpath-spring-zuul-gateway-example
     </description>
     <packaging>jar</packaging>
