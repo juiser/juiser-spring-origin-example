@@ -39,6 +39,7 @@
         <servlet.version>3.1.0</servlet.version>
         <slf4j.version>1.7.21</slf4j.version>
         <spring.boot.version>1.4.3.RELEASE</spring.boot.version>
+        <spring.security.version>4.2.1.RELEASE</spring.security.version>
     </properties>
     <dependencies>
         <dependency>
@@ -54,6 +55,21 @@
             <artifactId>bcpkix-jdk15on</artifactId>
             <version>${bouncycastle.version}</version>
             <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+            <version>${spring.boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-config</artifactId>
+            <version>${spring.security.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.security</groupId>
+            <artifactId>spring-security-web</artifactId>
+            <version>${spring.security.version}</version>
         </dependency>
         <dependency>
             <!-- For the welcome.html Thymeleaf template: -->
