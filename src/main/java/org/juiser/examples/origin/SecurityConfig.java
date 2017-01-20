@@ -1,4 +1,4 @@
-package com.stormpath.examples.origin;
+package org.juiser.examples.origin;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

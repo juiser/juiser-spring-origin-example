@@ -19,10 +19,10 @@
 
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.stormpath.examples</groupId>
-    <artifactId>stormpath-spring-juiser-origin-example</artifactId>
+    <groupId>org.juiser.examples</groupId>
+    <artifactId>juiser-spring-origin-example</artifactId>
     <version>0.1.0-SNAPSHOT</version>
-    <name>Stormpath Spring Juiser Origin Example</name>
+    <name>Juiser Spring Origin Example</name>
     <description>A juiser-enabled backend origin server that can automatically read an X-Forwarded-User header with a
         user JWT, validate the JWT, extract the user information, and represent that data in a user object.
 
@@ -44,7 +44,7 @@
     <dependencies>
         <dependency>
             <!-- To handle the X-Forwarded-User header: -->
-            <groupId>com.stormpath.juiser</groupId>
+            <groupId>org.juiser</groupId>
             <artifactId>juiser-spring-boot-starter</artifactId>
             <version>${juiser.version}</version>
         </dependency>
