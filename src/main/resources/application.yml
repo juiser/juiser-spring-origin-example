@@ -2,7 +2,7 @@ server:
   use-forward-headers: true
 
 juiser:
-    header:
-      jwt:
-        key:
-          resource: classpath:rsatest.pub.pem
+  header:
+    jwt:
+      key:
+        resource: classpath:rsatest.pub.pem
