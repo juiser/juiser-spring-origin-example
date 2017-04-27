@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-  ~ Copyright 2017 Stormpath, Inc.
+  ~ Copyright 2017 Les Hazlewood and the respective Juiser contributors
   ~
   ~ Licensed under the Apache License, Version 2.0 (the "License");
   ~ you may not use this file except in compliance with the License.
@@ -43,6 +43,7 @@
         <bouncycastle.version>1.56</bouncycastle.version>
         <juiser.version>0.1.0-SNAPSHOT</juiser.version>
     </properties>
+
     <dependencies>
         <dependency>
             <!-- To handle the X-Forwarded-User header: -->
