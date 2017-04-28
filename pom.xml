@@ -41,7 +41,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <bouncycastle.version>1.56</bouncycastle.version>
-        <juiser.version>0.1.0-SNAPSHOT</juiser.version>
+        <juiser.version>1.0.0</juiser.version>
     </properties>
 
     <dependencies>
